@@ -1,0 +1,233 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+:root {
+    --sidebar-width: 270px;
+    --sidebar-color: #205e43;
+    --color_primary: #00ff2f;
+}
+
+.main-container {
+    display: flex;
+}
+
+.sidebar {
+    position: fixed;
+    width: var(--sidebar-width);
+    height: 100vh;
+    background: var(--sidebar-color);
+}
+
+    .sidebar .logo {
+        text-align: center;
+    }
+
+        .sidebar .logo img {
+            margin-top: 30px;
+            height: 180px;
+        }
+
+.container {
+    width: 100%;
+    margin-left: var(--sidebar-width);
+}
+
+.toplevel-key {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    justify-content: space-between;
+}
+
+    .toplevel-key a {
+        margin-left: 20px;
+        font-size: 24px;
+        text-decoration: none;
+        color: #fff;
+        transition: all 0.3s ease;
+    }
+
+    .toplevel-key i {
+        margin-right: 10px;
+    }
+
+    .toplevel-key a:hover {
+        color: var(--color_primary);
+    }
+
+    .toplevel-key p {
+        margin: 20px 0 0 10px;
+        color: #8c8c8c;
+    }
+
+.nav {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+    .nav a {
+        margin-top: 4px;
+        padding: 10px 0px;
+        width: 100%;
+        text-decoration: none;
+        color: cornsilk;
+        font-weight: 500;
+        font-size: 20px;
+        transition: color 0.5s ease;
+    }
+
+        .nav a:hover {
+            color: var(--color_primary);
+        }
+
+    .nav i {
+        margin-right: 16px;
+        font-size: 26px;
+    }
+
+    .nav .active {
+        color: #45ff68;
+    }
+
+.topbar {
+    background: #277d5a;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+    .topbar .title {
+        padding-left: 30px;
+        font-size: 40px;
+        caret-color: transparent;
+        font-weight: 600;
+        color: #fff;
+        align-self: center;
+        white-space: nowrap;
+    }
+
+.content-container {
+    display: flex;
+}
+
+.container .form-title {
+    text-align: center;
+    background: #737373;
+    padding: 7px 0;
+    font-size: 40px;
+    color: #fff;
+}
+
+.formControl {
+    margin: 100px 50px 50px 100px;
+    width: 460px;
+    border: 1px solid #5c5c5c;
+}
+
+.textbox,
+.textbox input {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 7px;
+}
+
+    .textbox label {
+        width: 100%;
+        caret-color: transparent;
+        text-align: right;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+
+.textbox {
+    display: flex;
+    width: 100%;
+    justify-content: left;
+    align-items: center;
+}
+
+.section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .section-content .result {
+        font-size: 27px;
+        caret-color: transparent;
+        font-weight: 600;
+        margin-top: 20px;
+    }
+
+.section-server {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.server-buttons {
+    display: flex;
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .server-buttons div {
+        font-size: 22px;
+        font-weight: 600;
+        caret-color: transparent;
+        color: #5c5c5c;
+    }
+
+    .server-buttons a {
+        text-decoration: none;
+        font-size: 22px;
+        color: #b0ad12;
+        border-radius: 70px;
+        background: #fff;
+        font-weight: 600;
+        text-align: center;
+        vertical-align: middle;
+        width: 170px;
+        padding: 8px 20px;
+        margin-top: 10px;
+        border: 2px solid #b0ad12;
+        transition: all 0.4s ease;
+    }
+
+        .server-buttons a:hover {
+            background: #b0ad12;
+            color: #fff;
+        }
+
+footer {
+    position: fixed;
+    padding: 5px;
+    background-color: #808080;
+    bottom: 0px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 600;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+    color: #fff;
+}
+
+    footer span a {
+        color: var(--color_primary);
+        text-decoration: none;
+    }
+
+        footer span a:hover {
+            text-decoration: underline;
+        }

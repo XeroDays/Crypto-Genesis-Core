@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewData["Title"] = "Profit Calculator";
+}
+<div class="section-content">
+    <div class="formControl">
+        <div class="textbox">
+            <label for="enter">Enter Order at :</label>
+            <input id="txtEnter" type="number" step="any" value="0" onkeypress='return validate(event)'>
+        </div>
+
+        <div class="textbox">
+            <label for="close">Close Order at :</label>
+            <input id="txtClose" type="number" step="any" value="0" onkeypress='return validate(event)'>
+        </div>
+
+
+        <div class="textbox">
+            <label for="invest">Total Invested :</label>
+            <input id="txtInvested" type="number" step="any" value="0" onkeypress='return validate(event)'>
+        </div>
+    </div>
+      
+    <div id="lblCoins" class="result">Total Coins : 0.00045 BTC</div>
+
+    <div id="lblInvested" class="result">Total Invest : 50 USDT</div>
+
+    <div id="lblProfit" class="result">Total Profit/Loss : +8 USDT</div>
+
+</div>
+
+<div class="section-server">
+
+    <div class="server-buttons">
+        <div>Sync from Coin Market Cap</div>
+        <a href="#">Bitcoin</a>
+        <a href="#">XRP</a>
+        <a href="#">Lite Coin</a>
+        <a href="#">Ripple</a>
+    </div>
+
+</div>

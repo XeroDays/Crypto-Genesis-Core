@@ -1,0 +1,38 @@
+@media (max-width: 1200px) {
+    .content-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 960px) {
+    .formControl {
+        margin: 50px 25px 25px 50px;
+        width: 340px;
+        border: 1px solid #5c5c5c;
+    }
+    .section-content .result {
+        font-size: 20px;
+        caret-color: transparent;
+        font-weight: 600;
+        margin-top: 20px;
+    }
+    .textbox,
+    .textbox input {
+        font-size: 15px;
+        font-weight: 600;
+        padding: 7px;
+    }
+    .textbox label {
+        width: 80%;
+        caret-color: transparent;
+        text-align: right;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+    .sidebar {
+        visibility: collapse;
+    }
+    .container {
+        margin-left: 0px;
+    }
+}

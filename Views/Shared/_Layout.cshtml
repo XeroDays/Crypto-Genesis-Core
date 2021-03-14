@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/main.css" />
+    <link rel="stylesheet" href="~/css/responsive.css" />
+    <script src="https://kit.fontawesome.com/f06fc88bc5.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Cryptogenesis</title>
+</head>
+
+<body>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="logo">    <img src="~/images/logo.png" alt="CryptoGenesis"> </div>
+
+            <div class="toplevel-key">
+
+                <a asp-controller="Home" asp-action="Index" class="@Html.IsActive("Home","Index")"><i class="fa fa-tachometer-alt"></i>Dashboard</a>
+
+                <p>FEATURES</p>
+            </div>
+            <div class="nav">
+                <a asp-controller="Home" asp-action="ProfitCalc" class="@Html.IsActive("Home","ProfitCalc")"><i class="fas fa-vial"></i>Profit Calculator</a>
+                <a asp-controller="Home" asp-action="MarketChecker" class="@Html.IsActive("Home","MarketChecker")"><i class="fas fa-poll"></i>Market Cap Checker</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="topbar">
+                <div class="title">Crypto-Genesis</div>
+            </div>
+            <div class="form-title">
+                @ViewBag.Title
+            </div>
+            <div class="content-container">
+
+                @RenderBody()
+            </div>
+            <footer>
+                <span>Created by <a href="https://www.skysoltech.com">Skysol Technologies</a> | <span class="far fa-copyright"></span> 2021 All rights reserved.</span>
+            </footer>
+        </div>
+    </div>
+
+    @RenderSection("Scripts", required: false)
+    <script src="~/js/main.js"></script>
+</body>
+</html>

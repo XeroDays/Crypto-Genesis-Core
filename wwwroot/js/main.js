@@ -1,11 +1,18 @@
 $(document).ready(function() {
 
 });
-
-
-
+ 
 $('#txtEnter,#txtClose,#txtInvested').on('input', function(e) {
     calculateProfit();
+});
+
+
+$('.server-buttons p').click(function () {
+    var coin = $(this).text();
+    $.getJSON("../Coin/" + coin, function (dataa) {
+        $('#txtEnter').val(dataa.currentPrice);
+        $('#txtClose').val(dataa.currentPrice);
+    });
 });
 
 
@@ -43,9 +50,7 @@ var calculateProfit = function() {
 
 function validate(evt) {
 
-    var charCode = (evt.which) ? evt.which : evt.keyCode;
-
-    // alert(charCode + ' ' + evt.which);
+    var charCode = (evt.which) ? evt.which : evt.keyCode; 
     if ((charCode >= 48 && charCode <= 57) || charCode == 46 || charCode == 0)
         return true;
     return false;
